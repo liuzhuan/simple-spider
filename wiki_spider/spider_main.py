@@ -22,7 +22,7 @@ class SpiderMain(object):
                 self.urls.add_new_urls(new_urls)
                 self.outputer.collect_data(new_data)
 
-                if count == 100:
+                if count == 10:
                     break
                 
                 count = count + 1
@@ -32,7 +32,7 @@ class SpiderMain(object):
         self.outputer.output_html()
 
 if __name__ == '__main__':
-    root_url = "http://baike.baidu.com/item/react/18077599"
-    output_file = 'reactjs.html'
+    root_url = "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
+    output_file = 'wiki-reactjs.html'
     obj_spider = SpiderMain()
     obj_spider.crawl(root_url)
